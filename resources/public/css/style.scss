@@ -1,0 +1,67 @@
+$fonta: "Roboto", Helvetica, sans-serif;
+$back: rgb(37, 3, 26);
+$colora: rgb(147, 0, 76);
+$coloraa0: rgba(147, 0, 76, 0);
+$coloraa1: rgba(147, 0, 76, 1);
+$colorb: rgb(37, 3, 26);
+$colorba0: rgba(37, 3, 26, 0);
+$colorba1: rgba(37, 3, 26, 1);
+
+html {
+  background: $back;
+  font-family: $fonta;
+  color: white;
+}
+
+.logo {
+  height: 40px;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.navbar {
+  background: $colora;
+  background: -moz-linear-gradient(top, $coloraa0 1%, $colorba1 100%);
+  background: -webkit-linear-gradient(top, $coloraa0 1%, $colorba1 100%);
+  background: linear-gradient(to bottom, $coloraa0 1%, $colorba1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93004c', endColorstr='#500c68',GradientType=0 );
+
+  /* IE6-9 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navbar a:hover {
+  background: $colorb;
+}
+
+@media all and (max-width: 800px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navbar {
+    flex-shrink: 1;
+    padding: 0;
+  }
+
+  .navbar a {
+    text-align: center;
+  }
+}

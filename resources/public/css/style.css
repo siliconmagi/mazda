@@ -1,3 +1,47 @@
-body {
-background: purple;
-}
+html {
+  background: #25031a;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: white; }
+
+.logo {
+  height: 40px;
+  justify-content: flex-end;
+  margin: 0; }
+
+.navbar {
+  background: #93004c;
+  background: -moz-linear-gradient(top, rgba(147, 0, 76, 0) 1%, #25031a 100%);
+  background: -webkit-linear-gradient(top, rgba(147, 0, 76, 0) 1%, #25031a 100%);
+  background: linear-gradient(to bottom, rgba(147, 0, 76, 0) 1%, #25031a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93004c', endColorstr='#500c68',GradientType=0 );
+  /* IE6-9 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0; }
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white; }
+
+.navbar a:hover {
+  background: #25031a; }
+
+@media all and (max-width: 800px) {
+  .navbar {
+    justify-content: flex-end; } }
+@media all and (max-width: 600px) {
+  .navbar {
+    flex-shrink: 1;
+    padding: 0; }
+
+  .navbar a {
+    text-align: center; } }
+
