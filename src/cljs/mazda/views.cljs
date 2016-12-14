@@ -5,7 +5,7 @@
 (defn navbar []
   (fn []
     [:ul.navbar
-     [:li.navitem [:img.logo {:src "https://cdn.rawgit.com/siliconmagi/pictures/master/atar.svg"}]]
+     [:li.navitem [:a {:href "#/"} [:img.logo {:src "https://cdn.rawgit.com/siliconmagi/pictures/master/atar.svg"}]]]
      [:li.navitem [:a {:href "#/"} "Nightshell"]]
      [:li.navitem [:a {:href "#/blog"} "Blog"]]
      [:li.navitem [:a {:href "#/portfolio"} "Portfolio"]]
@@ -16,25 +16,37 @@
 (defn home-panel []
   (let [name (re-frame/subscribe [:name])]
     (fn []
-    [:div "This is the Home Page."
-     [:div [:a {:href "#/about"} "go to About Page"]]])))
+      [:div.main
+       [:div.container
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        [:form [:label "Name:" [:input {:type "text" :name "name"}]]]
+        ]])))
 
 ;; blog
 (defn blog-panel []
   (fn []
-    [:div "This is the Blog Page."
+    [:div.main "This is the Blog Page."
      [:div [:a {:href "#/"} "go to Home Page"]]]))
 
 ;; portfolio
 (defn portfolio-panel []
   (fn []
-    [:div "This is the Portfolio Page."
+    [:div.main "This is the Portfolio Page."
      [:div [:a {:href "#/"} "go to Home Page"]]]))
 
 ;; about
 (defn about-panel []
   (fn []
-    [:div "This is the About Page."
+    [:div.main "This is the About Page."
      [:div [:a {:href "#/"} "go to Home Page"]]]))
 
 ;; main
@@ -53,5 +65,5 @@
   (let [active-panel (re-frame/subscribe [:active-panel])]
     (fn []
       [:div
-      [navbar]
-      [show-panel @active-panel]])))
+       [navbar]
+       [show-panel @active-panel]])))

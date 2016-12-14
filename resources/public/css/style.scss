@@ -1,8 +1,8 @@
 $fonta: "Roboto", Helvetica, sans-serif;
 $back: rgb(37, 3, 26);
-$colora: rgb(147, 0, 76);
-$coloraa0: rgba(147, 0, 76, 0);
-$coloraa1: rgba(147, 0, 76, 1);
+$colora: rgb(77, 15, 56);
+$coloraa0: rgba(77, 15, 56, 0);
+$coloraa1: rgba(77, 15, 56, 1);
 $colorb: rgb(37, 3, 26);
 $colorba0: rgba(37, 3, 26, 0);
 $colorba1: rgba(37, 3, 26, 1);
@@ -13,55 +13,57 @@ html {
   color: white;
 }
 
-.logo {
-  height: 40px;
-  justify-content: flex-end;
-  margin: 0;
+form input[type="text"] {
+  font-size: 16px;
+  width: 80%;
+  float: right;
 }
 
-.navbar {
-  background: $colora;
-  background: -moz-linear-gradient(top, $coloraa0 1%, $colorba1 100%);
-  background: -webkit-linear-gradient(top, $coloraa0 1%, $colorba1 100%);
-  background: linear-gradient(to bottom, $coloraa0 1%, $colorba1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93004c', endColorstr='#500c68',GradientType=0 );
-
-  /* IE6-9 */
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+.container {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+ul.navbar {
+  background: $colora;
   list-style: none;
-  margin: 0;
-}
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
+  -webkit-padding-start: 0px;
+  padding: 0;
 
-.navbar a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: white;
-}
-
-.navbar a:hover {
-  background: $colorb;
-}
-
-@media all and (max-width: 800px) {
-  .navbar {
-    justify-content: flex-end;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navbar {
-    flex-shrink: 1;
-    padding: 0;
+  img {
+    height: 30px;
   }
 
-  .navbar a {
-    text-align: center;
+  a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px;
+  }
+
+  a:hover {
+    background: $colorb;
   }
 }
