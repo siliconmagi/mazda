@@ -1,16 +1,27 @@
-$fonta: "Roboto", Helvetica, sans-serif;
-$back: rgb(37, 3, 26);
-$colora: rgb(77, 15, 56);
-$coloraa0: rgba(77, 15, 56, 0);
-$coloraa1: rgba(77, 15, 56, 1);
-$colorb: rgb(37, 3, 26);
-$colorba0: rgba(37, 3, 26, 0);
-$colorba1: rgba(37, 3, 26, 1);
+$fonta: "Droid Sans Mono", Helvetica, sans-serif;
+$back: #27020f;
+$colora: #470022;
+$colorb: #9a1235;
+$colorc: #d77da5;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
 
 html {
   background: $back;
-  font-family: $fonta;
   color: white;
+}
+
+p {
+font-size: 1.2em;
+}
+
+a {
+  color: $colorc;
 }
 
 form input[type="text"] {
@@ -30,9 +41,17 @@ form input[type="text"] {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  margin: 0 0 0 0;
 }
 
 ul.navbar {
+  @include border-radius(10px);
+
   background: $colora;
   list-style: none;
   display: -webkit-flex;
@@ -51,9 +70,10 @@ ul.navbar {
   align-content: flex-end;
   -webkit-padding-start: 0px;
   padding: 0;
+  margin: 0;
 
-  img {
-    height: 30px;
+  .logo {
+    height: 50px;
   }
 
   a {
@@ -61,9 +81,64 @@ ul.navbar {
     display: block;
     color: white;
     padding: 10px;
+    font-size: 1.3em;
   }
 
   a:hover {
+    @include border-radius(10px);
+
     background: $colorb;
+  }
+
+  a:active {
+    background: $colorb;
+  }
+}
+
+.col {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
+}
+
+.col-1 {
+  width: 30%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 400px;
+
+  .home {
+    width: 96%;
+    border: 5px solid $colorb;
+    border-radius: 10px;
+  }
+}
+
+.col-2 {
+  width: 70%;
+  max-width: 700px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
   }
 }

@@ -1,7 +1,12 @@
 html {
-  background: #25031a;
-  font-family: "Roboto", Helvetica, sans-serif;
+  background: #27020f;
   color: white; }
+
+p {
+  font-size: 1.2em; }
+
+a {
+  color: #d77da5; }
 
 form input[type="text"] {
   font-size: 16px;
@@ -18,10 +23,19 @@ form input[type="text"] {
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%; }
+
+h1 {
+  margin: 0 0 0 0; }
 
 ul.navbar {
-  background: #4d0f38;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: #470022;
   list-style: none;
   display: -webkit-flex;
   display: flex;
@@ -38,15 +52,64 @@ ul.navbar {
   -webkit-align-content: flex-end;
   align-content: flex-end;
   -webkit-padding-start: 0px;
-  padding: 0; }
-  ul.navbar img {
-    height: 30px; }
+  padding: 0;
+  margin: 0; }
+  ul.navbar .logo {
+    height: 50px; }
   ul.navbar a {
     text-decoration: none;
     display: block;
     color: white;
-    padding: 10px; }
+    padding: 10px;
+    font-size: 1.3em; }
   ul.navbar a:hover {
-    background: #25031a; }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    background: #9a1235; }
+  ul.navbar a:active {
+    background: #9a1235; }
+
+.col {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-end;
+  align-content: flex-end; }
+
+.col-1 {
+  width: 30%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 400px; }
+  .col-1 .home {
+    width: 96%;
+    border: 5px solid #9a1235;
+    border-radius: 10px; }
+
+.col-2 {
+  width: 70%;
+  max-width: 700px; }
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

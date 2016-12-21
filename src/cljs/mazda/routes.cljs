@@ -30,6 +30,8 @@
   (defroute "/about" []
     (re-frame/dispatch [:set-active-panel :about-panel]))
 
+  (defroute "/form" []
+    (re-frame/dispatch [:set-active-panel :form-panel]))
 
   ;; --------------------
   (hook-browser-navigation!))
