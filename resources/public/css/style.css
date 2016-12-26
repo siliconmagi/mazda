@@ -2,11 +2,12 @@ html {
   background: #27020f;
   color: white; }
 
-p {
-  font-size: 1.2em; }
-
 a {
   color: #d77da5; }
+
+h4 {
+  font-weight: bold;
+  text-decoration: underline; }
 
 form input[type="text"] {
   font-size: 16px;
@@ -26,9 +27,39 @@ form input[type="text"] {
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%; }
+  .container p {
+    font-size: 1.2em; }
 
 h1 {
   margin: 0 0 0 0; }
+
+.logo {
+  height: 50px; }
+
+ul.footer {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
+  -webkit-padding-start: 0px;
+  padding: 0;
+  margin: 0; }
+  ul.footer p {
+    display: block;
+    color: white;
+    padding: 10px;
+    font-size: 1.3em; }
 
 ul.navbar {
   -webkit-border-radius: 10px;
@@ -54,8 +85,6 @@ ul.navbar {
   -webkit-padding-start: 0px;
   padding: 0;
   margin: 0; }
-  ul.navbar .logo {
-    height: 50px; }
   ul.navbar a {
     text-decoration: none;
     display: block;
@@ -97,9 +126,9 @@ ul.navbar {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  max-width: 400px; }
+  max-width: 600px; }
   .col-1 .home {
-    width: 96%;
+    width: 95%;
     border: 5px solid #9a1235;
     border-radius: 10px; }
 
@@ -110,6 +139,7 @@ ul.navbar {
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
-    width: 100%; } }
+    width: 100%;
+    -webkit-margin-before: 1em; } }
 
 /*# sourceMappingURL=style.css.map */

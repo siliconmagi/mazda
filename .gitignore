@@ -2,4 +2,5 @@
 /target
 /*-init.clj
 /resources/public/js/compiled
-out
+node_modules/
+resources/public/js/node_modules/bundle.js

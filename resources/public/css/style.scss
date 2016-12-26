@@ -16,12 +16,13 @@ html {
   color: white;
 }
 
-p {
-font-size: 1.2em;
-}
-
 a {
   color: $colorc;
+}
+
+h4 {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 form input[type="text"] {
@@ -43,10 +44,46 @@ form input[type="text"] {
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
+
+  p {
+    font-size: 1.2em;
+  }
 }
 
 h1 {
   margin: 0 0 0 0;
+}
+
+.logo {
+  height: 50px;
+}
+
+ul.footer {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
+  -webkit-padding-start: 0px;
+  padding: 0;
+  margin: 0;
+
+  p {
+    display: block;
+    color: white;
+    padding: 10px;
+    font-size: 1.3em;
+  }
 }
 
 ul.navbar {
@@ -71,10 +108,6 @@ ul.navbar {
   -webkit-padding-start: 0px;
   padding: 0;
   margin: 0;
-
-  .logo {
-    height: 50px;
-  }
 
   a {
     text-decoration: none;
@@ -122,10 +155,10 @@ ul.navbar {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  max-width: 400px;
+  max-width: 600px;
 
   .home {
-    width: 96%;
+    width: 95%;
     border: 5px solid $colorb;
     border-radius: 10px;
   }
@@ -140,5 +173,6 @@ ul.navbar {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
+    -webkit-margin-before: 1em;
   }
 }
