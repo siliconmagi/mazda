@@ -8,7 +8,7 @@
     [:div.container
      [:h2 "Home"]
      [:div.col
-      [:div.col-1 [:img.home {:src ""}]]
+      [:div.col-1 [:img.home {:src "https://cdn.rawgit.com/siliconmagi/pictures/master/proto-min.svg"}]]
       [:div.col-2 [:p "Welcome to Nightshell.com!  This website is a platform for blogging content and web development used by " [:a {:href "https://github.com/siliconmagi"} "Silicon Magi"] ". To read my latest blog entries, check below or see " [:a {:href "#/blog"} "blog"] ". For further information regarding employment or tutoring check out " [:a {:href "#/about"} "about"] "." ]
        [:h3 "Blog content coming soon!"]]]]))
 

@@ -1,6 +1,10 @@
 /*.log
-/target
 /*-init.clj
-/resources/public/js/compiled
+.cljs_rhino_repl/
+.sass-cache/
+target/
 node_modules/
-resources/public/js/node_modules/bundle.js
+resources/public/src/config.js
+resources/public/bundle.js
+resources/public/js/
+
